@@ -1,0 +1,21 @@
+conditional:
+
+comparisions always return a boolean
+
+order of precedence:
+1. comparisions
+2 equality
+3 logical AND
+4 logical OR 
+
+Ternary operator
+true ? "this is true" : "this is not true" 
+=> "this is true"
+false ? "this is true" : "this is not true"
+=>"this is not true"
+
+
+case statement
+
+ In Ruby, every expression evaluates as true when used in flow control, except for false and nil
+ 

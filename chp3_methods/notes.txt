@@ -1,0 +1,12 @@
+def method
+  #do stuff
+end
+
+
+mutating the caller
+when calling a method, the argument can be altered permanently
+(method parameters are scoped at the method def lvl)
+
+
+the Call Stack:
+methods, block, proc, lambdas use call Stack
