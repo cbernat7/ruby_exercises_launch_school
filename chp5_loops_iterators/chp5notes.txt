@@ -1,0 +1,19 @@
+can use break to exit loop
+next to skip rest of the code in an iteration
+
+
+"loop do" 
+-a method
+
+"while" loop 
+-not a methods. 
+-does not have its own scope.
+-returns "nil"
+
+until loop
+- opposite of while loop
+-not a method 
+
+for loop 
+- not a method
+-returns collection of elements after if executes.
