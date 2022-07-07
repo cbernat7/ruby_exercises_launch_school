@@ -1,0 +1,20 @@
+first element = array.first
+last element = array.last
+
+pop = removes and returns the last item in the arrary
+push = add back to array permantetly
+<< 
+
+push and << mutate the caller, so original array IS modified
+
+collect/map = iterates over an array and returns a new array w the results
+no change to initial array.
+
+delete_at = modifies original array. returns deleted value
+delete = when you know the value but not the index
+uniq = deletes and duplicate values that exist, returns as a new array/ doesn't modify orig array/
+adding ! makes it destructive
+b.uniq 
+uniq! = modifies orig array 
+b.uniq!
+
