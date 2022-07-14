@@ -1,0 +1,80 @@
+arrays - store items by ordered index
+hashes - stores items by associated keys. key-value pairs
+
+old_syntax_hash = {:name => 'bob'}
+new_hash = {name: 'bob'}
+person = { height: '6 ft', weight: '160lbs' }
+
+to add onto a hashes
+person[:hair] = 'brown'
+=>returns value added
+
+remove something
+person.delete(:age)
+=>returns value deleted
+
+retrieve info
+person[:weight]
+=>"160 lbs"
+
+merge 2 hashes together. merge creates new hash but leaves orig the same
+merge! changes orig hash 
+person.merge!(new_hash)
+
+
+empty? = can detect if a paramter has anything passes into it.
+
+
+Hash keys: 
+can be string, array, integer, float, hash 
+must use old syntax when not using a symbol as a key
+
+{"height" => "6 ft"}
+{["height"] = > "6 ft"}
+{1 => "one"}
+{45.5456 => "float number"}
+{{:key=>"key}=> "hash as a key"}
+
+key? 
+  check if a hash contains a specific key. returns boolean
+  hash.key?("steve")
+  =>true
+
+select
+  pass a block and will return any key-value pairs that evaluate to true
+  name.select { |k,v| k == "bob" }
+  =>{"bob"=>42}
+
+fetch
+  pass a key and will return value for that key if it exists.
+  can specify option for if the key isnt present.
+  
+  name.fetch("steve")
+  =>32
+
+  name.fetch("larry")
+  =>KeyError: key not found: "larry"
+
+  name.fetch("Larry", "Larry isn't in this hash")
+  =>"Larry isn't in this hash"
+
+to_a
+  returns an array version of the hash. doesn't modify hash permanently
+
+  name.to_a
+  [["bob, 42], ["Steve", 31], ["Joe", 19]]
+
+to retrieve all the keys or all the values of a hash 
+  name.keys
+  =>returns all keys in array format
+  name.values
+  =>returns all values in array format
+
+  can print out all keys in a hash like so:
+  name.keys.each { |k| puts k}
+  since return value is an array.
+
+
+hashes maintain their order since Ruby 1.9
+older, they aren't in specific order
+

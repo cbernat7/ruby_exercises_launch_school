@@ -1,0 +1,77 @@
+first element = array.first
+last element = array.last
+
+pop = removes and returns the last item in the array
+push = add back to array permanently
+<< 
+
+push and << mutate the caller, so original array IS modified
+
+collect/map = iterates over an array and returns a new array w the results
+no change to initial array.
+
+delete_at = modifies original array. returns deleted value
+delete = when you know the value but not the index
+uniq = deletes and duplicate values that exist, returns as a new array/ doesn't modify orig array/
+adding ! makes it destructive
+b.uniq 
+uniq! = modifies orig array 
+b.uniq!
+
+iterating over an array
+numbers.select { |number| number > 4 } 
+  this returns array with any time that return "true" to the expression
+  does not mutate the caller
+
+can compare arrays with ==
+
+to_s 
+  creates string representatin of an array 
+
+include? = will return boolean
+a.include?(3)
+=> true 
+
+flatten - takes an array w nested arrays and creates 1 dimensional array
+array.flatten 
+
+each_index - iterates through the array, variable represents the index instead of the value. 
+passes the index into the block.
+orginaly array is returned
+
+a.each_index { |i| puts "This is index #{i}" }
+
+each_with_index - similar to above. returns array 
+a.each_with_index { |val, idx| puts "#{idx+1}. #{val}" }
+
+a.sort - returns sorted array. not destructive
+
+[1, 2, 3].product([4, 5])
+=> [[1, 4], [1, 5], [2, 4], [2, 5], [3, 4], [3, 5]]
+-returns an array that is a combination of all elements from all arrays.
+
+each - runs the code in the block once for each element in the collection
+returns the collection it was invoked on
+if no block given, returns an enumerator
+a = [1, 2, 3]
+a.each { |e| puts e}
+1
+2
+3
+=>[1, 2, 3]
+
+map - when givena block, invokes block once for each element in the collection
+but returns a new arry containing the values returned by the block:
+a = [1, 2, 3]
+a.map { |x| x**2 }
+=> [1, 4, 9]
+
+a.map { |x| puts x**2 }
+1
+4
+9
+=> [nil, nil, nil]
+
+this returns an array w nill bc "puts" returns nill each iteration
+
+Notice that when you reference an index of a string that is beyond the length of the string, Ruby returns nil and doesn't throw an error.
