@@ -1,0 +1,42 @@
+Regex
+
+=~
+  see if there is a match with the Regex
+/
+  starts the regex out. inside //, can place any chanractaers to match w a string  
+
+
+  "powerball" =~ /b/
+  =>5
+
+  the first match that took place was @ the 5th index of the string.
+
+  def has_a_b?(string)
+    if string =~ /b/
+      puts "we have a B!"
+    else
+      puts "no match"
+    end
+  end
+
+
+match 
+  returns a MatchData object. describes the match or "nill"
+  /b/.match("powerball")
+
+----------------------------------------
+STANDARD CLASSES
+use ruby's built-in libraries.
+Math 
+Math.sqrt(400)
+=> 20.0
+
+t=Time.new(2008, 7, 4)
+t.monday?
+=>false
+t.friday?
+=>true
+
+------------------------------------
+BLOCKS AND PROCS
+
